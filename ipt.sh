@@ -1,6 +1,6 @@
 #!/bin/bash
-LAN="eth0"
-WAN="eth1"
+LAN="eth1"
+WAN="eth0"
 
 # flush tables
 iptables -F
