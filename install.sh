@@ -25,7 +25,7 @@ sudo cp /tmp/rpi-cellular-router/etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf
 
 # Accessing the internet
 sudo apt install --yes iptables
-chmod +x /tmp/rpi-cellular-router/ipt.sh
+sudo chmod +x /tmp/rpi-cellular-router/ipt.sh
 sudo /tmp/rpi-cellular-router/ipt.sh
 sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
 sudo cp /tmp/rpi-cellular-router/etc/network/if-up.d/iptables /etc/network/if-up.d/iptables
