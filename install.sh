@@ -11,16 +11,13 @@ sudo git clone https://github.com/brutesque/rpi-cellular-router /tmp/rpi-cellula
 # https://www.g7smy.co.uk/2014/08/raspberry-pi-as-a-3g4g-router/
 
 # Configuring the network
-sudo cp /etc/sysctl.conf /etc/sysctl.conf.old
 sudo cp /tmp/rpi-cellular-router/etc/sysctl.conf /etc/sysctl.conf
 sudo sysctl -w net.ipv4.ip_forward=1
 
-sudo cp /etc/network/interfaces /etc/network/interfaces.old
 sudo cp /tmp/rpi-cellular-router/etc/network/interfaces /etc/network/interfaces
 
 # Setup DHCP
 sudo apt install --yes isc-dhcp-server
-sudo cp /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf.old
 sudo cp /tmp/rpi-cellular-router/etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf
 
 # Accessing the internet
