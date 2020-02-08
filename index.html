@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="These instructions will help create a router from a raspberry pi. The goal is to setup eth0 as LAN and eth1 as WAN. This particular setup works with a raspberry pi B2 and a Huawei E3372 LTE USB stick.">
+		<meta name="author" content="Brutesque">
+
+		<!-- Schema.org markup for Google+ -->
+		<meta itemprop="name" content="Raspberry Pi Router">
+		<meta itemprop="description" content="These instructions will help create a router from a raspberry pi. The goal is to setup eth0 as LAN and eth1 as WAN. This particular setup works with a raspberry pi B2 and a Huawei E3372 LTE USB stick.">
+
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@brutesque">
+		<meta name="twitter:title" content="Raspberry Pi Router">
+		<meta name="twitter:description" content="These instructions will help create a router from a raspberry pi. The goal is to setup eth0 as LAN and eth1 as WAN. This particular setup works with a raspberry pi B2 and a Huawei E3372 LTE USB stick.">
+		<meta name="twitter:creator" content="@brutesque">
+
+		<!-- Open Graph data -->
+		<meta property="og:title" content="Raspberry Pi Router" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://brutesque.github.io/rpi-router" />
+		<meta property="og:description" content="These instructions will help create a router from a raspberry pi. The goal is to setup eth0 as LAN and eth1 as WAN. This particular setup works with a raspberry pi B2 and a Huawei E3372 LTE USB stick." />
+
+
+		<title>Raspberry Pi Router — for usage with USB LTE stick</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Sticky footer -->
+		<style>
+			/* Sticky footer styles
+			-------------------------------------------------- */
+			html {
+				position: relative;
+				min-height: 100%;
+			}
+			body {
+				/* Margin bottom by footer height */
+				margin-bottom: 60px;
+			}
+			.footer {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				/* Set the fixed height of the footer here */
+				height: 60px;
+				background-color: #f5f5f5;
+			}
+
+
+			/* Custom page CSS
+			-------------------------------------------------- */
+
+			.container {
+				padding: 0 15px;
+			}
+			.container .text-muted {
+				margin: 20px 0;
+			}
+		</style>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="container">
+
+			<div class="jumbotron">
+				<div class="container">
+					<div class="page-header">
+					<h1>Raspberry Pi Router <small>for usage with USB LTE stick</small></h1>
+				</div>
+				<p>These instructions will help create a router from a raspberry pi. The goal is to setup eth0 as LAN and eth1 as WAN. This particular setup works with a raspberry pi B2 and a Huawei E3372 LTE USB stick.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Install Raspberry Pi Router</h3>
+					<p>Write 2019-09-26-raspbian-buster-lite.img to a SD-card. Insert the SD-card into the raspberry pi and start it up. Log into the Raspberry Pi and make sure that you can connect to the internet using the LTE USB stick:</p>
+				</div>
+				<div class="col-md-12">
+					<pre>ping 1.1.1.1</pre>
+				</div>
+				<div class="col-md-12">
+					<p>Enter the following command to setup the router:</p>
+				</div>
+				<div class="col-md-12">
+					<pre>bash -c "$(curl -fsSL raw.githubusercontent.com/brutesque/rpi-router/master/install.sh)"</pre>
+				</div>
+				<div class="col-md-12">
+					If everything went well, the raspberry pi will reboot and routing will be enabled.
+				</div>
+			</div>
+
+		</div> <!-- /container -->
+
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted text-center">By <a href="http://www.brutesque.com" target="_blank">Brutesque</a></p>
+			</div>
+		</footer>
+		<a href="https://github.com/brutesque/rpi-router"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
+
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
