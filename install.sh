@@ -25,3 +25,6 @@ sudo bash /tmp/rpi-router/ipt.sh
 sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
 sudo cp /tmp/rpi-router/etc/network/if-up.d/iptables /etc/network/if-up.d/iptables
 sudo chmod +x /etc/network/if-up.d/iptables
+
+# Reboot
+sudo reboot
