@@ -16,7 +16,7 @@ Enter the following command to setup the router:
 $ bash -c "$(curl -fsSL raw.githubusercontent.com/brutesque/rpi-router/master/install.sh)"
 ```
 
-If everything went well, the raspberry pi will reboot and routing will be enabled.
+If everything went well, the Raspberry Pi will reboot and routing will be enabled.
 
 #### Resources
 - https://www.g7smy.co.uk/2014/08/raspberry-pi-as-a-3g4g-router/
