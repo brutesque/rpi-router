@@ -21,8 +21,7 @@ sudo cp /tmp/rpi-router/etc/default/isc-dhcp-server /etc/default/isc-dhcp-server
 
 # Accessing the internet
 sudo apt install --yes iptables
-sudo chmod +x /tmp/rpi-router/ipt.sh
-sudo /tmp/rpi-router/ipt.sh
+sudo bash /tmp/rpi-router/ipt.sh
 sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
 sudo cp /tmp/rpi-router/etc/network/if-up.d/iptables /etc/network/if-up.d/iptables
 sudo chmod +x /etc/network/if-up.d/iptables
